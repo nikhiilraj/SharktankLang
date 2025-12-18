@@ -1,0 +1,26 @@
+pitch("Hello Sharks! We built MoodDosa.")
+valuation(200)
+ask(50, 5)
+
+shark Ashneer ->
+    sab_bekaar_hai("unit economics")
+    doglapan_alert("unrealistic claims")
+    offer(30, 10)
+end
+
+shark Namita ->
+    pharma_sahi_kar_lo("distribution")
+    for_that_reason_im_out()
+end
+
+shark Aman ->
+    kya_kar_raha_hai_tu("marketing?")
+    boAt_waala_offer(40, 7)
+end
+
+shark Peyush ->
+    i_believe_in_you("team is solid")
+    offer(50, 5)
+end
+
+deal()
