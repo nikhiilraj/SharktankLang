@@ -1,140 +1,119 @@
-# 🟢 Language Guide (User View)
+# 🟢 SharkTankLang (STL)
+
+A domain-specific language for the high-stakes world of startup pitching. Write your pitch, handle the heat from the Sharks, and close the deal.
 
 ## 🧠 Core Idea
 
-You write startup pitches.  
-Sharks react.  
-Deals happen.
+1. **Draft your Pitch:** Define your product and your ask.
+2. **Sharks React:** Define shark-specific logic and catchphrases.
+3. **The Result:** Negotiate and finalize the deal.
 
 ---
 
 ## 🟢 Basic Syntax
 
-### 📣 Pitch
+### 📣 Pitching the Idea
 
-```stl
+The `pitch` function initializes your session.
+
+```python
+
 pitch("Hello Sharks! We built MoodDosa.")
-````
 
----
+```
 
 ### 💰 Valuation & Ask
 
-```stl
-valuation(200)
-ask(50, 5)
+Define your financial standing before the Sharks start biting.
+
+```python
+valuation(200) # Valuation in ₹ Cr
+ask(50, 5)     # Asking ₹50 Cr for 5% equity
+
 ```
-
-Meaning:
-
-* Valuation = ₹200 Cr
-* Asking ₹50 Cr for 5%
 
 ---
 
 ## 🦈 Sharks
 
-Sharks are written as **blocks**.
+Sharks are written as **scoped blocks**. Logic placed inside a shark block is specific to that personality.
 
-```stl
+```ruby
 shark Ashneer ->
     sab_bekaar_hai("unit economics")
     offer(30, 10)
 end
+
 ```
 
 ### Supported Sharks
 
-* Ashneer
-* Aman
-* Namita
-* Peyush
-* Anupam
-* Vineeta
+* `Ashneer`
+* `Aman`
+* `Namita`
+* `Peyush`
+* `Anupam`
+* `Vineeta`
 
 ---
 
 ## 🗣️ Catchphrases
 
-Catchphrases are the **heart of the language**.
+Catchphrases trigger specific state changes or dialogue in the simulation.
 
-### With Arguments
-
-```stl
-sab_bekaar_hai("pricing")
-doglapan_alert("unrealistic claims")
-kya_kar_raha_hai_tu("marketing?")
-i_believe_in_you("strong founders")
-```
-
-### Without Arguments
-
-```stl
-for_that_reason_im_out()
-```
+| Function | Type | Description |
+| --- | --- | --- |
+| `sab_bekaar_hai("reason")` | Argument | Rejects the premise based on a metric. |
+| `doglapan_alert("claim")` | Argument | Flags inconsistent numbers. |
+| `kya_kar_raha_hai_tu("tag")` | Argument | Questions the founder's direction. |
+| `i_believe_in_you("text")` | Argument | Positive reinforcement. |
+| `for_that_reason_im_out()` | No Arg | Shark exits the deal. |
 
 ---
 
 ## 💸 Offers & Deals
 
-### Making an Offer
+Negotiate your way to a term sheet.
 
-```stl
-offer(40, 7)
-```
-
-### Counter Offer
-
-```stl
-counter(35, 8)
-```
-
-### Final Decision
-
-```stl
-deal()
-```
-
-or
-
-```stl
-no_deal()
-```
+* **Make an Offer:** `offer(amount, equity)`
+* **Counter Offer:** `counter(amount, equity)`
+* **Close the Deal:** Use `deal()` or `no_deal()`.
 
 ---
 
 ## 🧪 Complete Example Program
 
-```stl
-pitch("Hello Sharks!")
-valuation(200)
-ask(50, 5)
+```ruby
+pitch("Innovative AI-driven Chai-point")
+valuation(100)
+ask(10, 10)
 
-shark Ashneer ->
-    sab_bekaar_hai("unit economics")
-    offer(30, 10)
+shark Aman ->
+    i_believe_in_you("Great branding")
+    offer(10, 8)
 end
 
-shark Peyush ->
-    i_believe_in_you("great team")
-    offer(50, 5)
+shark Namita ->
+    sab_bekaar_hai("Expertise")
+    for_that_reason_im_out()
 end
 
 deal()
+
 ```
 
 ---
 
 ## ❌ Errors & Diagnostics
 
-Errors are **human-friendly**, not Python tracebacks.
+STL provides **human-friendly** error messages instead of complex stack traces.
 
-```text
-🦈 SharkTankLang Error
-→ Line 1: print("test")
-✖ Unknown syntax.
-💡 Hint: Use pitch(), ask(), offer(), deal(), or shark catchphrases.
-```
+> [!CAUTION]
+> ### 🦈 SharkTankLang Error
+> 
+> 
+> **→ Line 1:** `print("test")`
+> **✖ Unknown syntax.** > **💡 Hint:** Use `pitch()`, `ask()`, `offer()`, `deal()`, or shark catchphrases.
 
 ---
 
@@ -144,10 +123,12 @@ Errors are **human-friendly**, not Python tracebacks.
 
 ```bash
 sharktanklang run pitch.stl
+
 ```
 
 ### Start REPL
 
 ```bash
 sharktanklang repl
+
 ```
