@@ -2,32 +2,80 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>SharkTankLang Playground</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
-<h1>🦈 SharkTankLang Playground</h1>
+  <!-- HEADER -->
+  <header class="header">
+    <div>
+      <h1>SharkTankLang 🦈</h1>
+      <p class="subtitle">A fun programming language inspired by Shark Tank India</p>
+    </div>
 
-<div class="container">
-  <textarea id="editor">
-pitch("Hello Sharks!")
-valuation(200)
-ask(50, 5)
+    <div class="links">
+      <span class="name">Nikhil Raj</span>
+      <a href="https://github.com/nikhiilraj" target="_blank">GitHub</a>
+      <a href="http://www.linkedin.com/in/nikhilraj-dev" target="_blank">LinkedIn</a>
+      <a href="mailto:nikhil4rajj@gmail.com">Email</a>
+    </div>
+  </header>
 
-shark Ashneer ->
-    sab_bekaar_hai("pricing")
-    offer(30, 10)
-end
+  <div class="section-divider"></div>
 
-deal()
-  </textarea>
+  <!-- CHEAT SHEET -->
+  <section class="card">
+    <h2 class="section-title">Tiny Cheat Sheet 🦈</h2>
 
-  <pre id="output">Output will appear here...</pre>
-</div>
+    <div class="sheet">
+      <div><code>pitch("Hello Sharks!")</code></div><div>→ print a message</div>
+      <div><code>valuation(200)</code></div><div>→ set company valuation</div>
+      <div><code>ask(50, 5)</code></div><div>→ ask ₹50 Cr for 5% equity</div>
+      <div><code>shark Ashneer -></code></div><div>→ Ashneer’s turn begins</div>
+      <div><code>sab_bekaar_hai("X")</code></div><div>→ rejection with reason</div>
+      <div><code>offer(30, 10)</code></div><div>→ make an offer</div>
+      <div><code>deal()</code></div><div>→ accept final deal</div>
+    </div>
 
-<button onclick="runCode()">▶ Run</button>
+    <a class="docs-link"
+       href="https://github.com/nikhiilraj/SharktankLang/tree/main/docs"
+       target="_blank">
+       📘 Full Language Documentation →
+    </a>
+  </section>
 
-<script src="app.js"></script>
+  <div class="section-divider"></div>
+
+  <!-- PLAYGROUND -->
+  <section class="card playground">
+    <div id="editor"></div>
+
+    <div class="output-container">
+      <div class="output-header">Output</div>
+      <pre id="output">Click “Run Pitch” to see output...</pre>
+    </div>
+  </section>
+
+  <button class="run-btn" onclick="runCode()">▶ Run Pitch</button>
+
+  <div class="section-divider"></div>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <p><strong>Built by Nikhil Raj</strong></p>
+    <p>CS @ IIIT Nagpur</p>
+    <p class="note">Building things for clarity, curiosity, and fun.</p>
+  </footer>
+
+  <script src="https://unpkg.com/monaco-editor@0.45.0/min/vs/loader.js"></script>
+  <script src="app.js"></script>
+
 </body>
 </html>

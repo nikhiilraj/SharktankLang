@@ -1,10 +1,20 @@
 from fastapi import FastAPI
+from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
 from sharktanklang.interpreter import compile_source, safe_exec
 import io
 import contextlib
 
 app = FastAPI(title="SharkTankLang Playground")
+
+# ✅ ADD CORS MIDDLEWARE
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"],      # allow all origins (safe for demo)
+    allow_credentials=True,
+    allow_methods=["*"],      # allow POST, OPTIONS, etc.
+    allow_headers=["*"],
+)
 
 class CodeRequest(BaseModel):
     code: str
