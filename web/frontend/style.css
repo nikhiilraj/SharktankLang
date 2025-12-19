@@ -1,0 +1,32 @@
+body {
+  font-family: monospace;
+  background: #0f172a;
+  color: #e5e7eb;
+  padding: 20px;
+}
+
+.container {
+  display: flex;
+  gap: 20px;
+}
+
+textarea {
+  width: 50%;
+  height: 400px;
+  background: #020617;
+  color: #e5e7eb;
+  padding: 10px;
+}
+
+pre {
+  width: 50%;
+  background: #020617;
+  padding: 10px;
+  overflow: auto;
+}
+
+button {
+  margin-top: 10px;
+  padding: 10px 20px;
+  font-size: 16px;
+}
