@@ -6,7 +6,7 @@ You pitch startups, get rejected, receive offers, and close deals — all in cod
 
 While the syntax is playful, the implementation is serious. SharkTankLang includes a real interpreter, automated tests, CI, proper packaging, and a live web playground.
 
-👉 **Live Playground:** <[YOUR LIVE URL](https://sharktank-lang.vercel.app)>  
+👉 **Live Playground:** <[sharktanklang](https://sharktank-lang.vercel.app)>  
 📦 **Install:** `pip install sharktanklang`
 
 ---
