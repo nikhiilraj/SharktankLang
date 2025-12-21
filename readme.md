@@ -89,7 +89,7 @@ To make the language accessible, SharkTankLang includes a **live web IDE**:
 * Clean output and error handling
 * Deployed frontend and backend
 
-👉 Try it live: <[YOUR LIVE URL](https://sharktank-lang.vercel.app)>
+👉 Try it live: <[LIVE URL](https://sharktank-lang.vercel.app)>
 
 ---
 
@@ -180,7 +180,7 @@ CS @ IIIT Nagpur
 
 Building things for clarity, curiosity, and fun.
 
-* GitHub: <[YOUR GITHUB](https://github.com/nikhiilraj)>
+* GitHub: <[GITHUB](https://github.com/nikhiilraj)>
 * LinkedIn: <https://www.linkedin.com/in/nikhilraj-dev/>
 * Email: <mailto: nikhil4rajj@gmail.com>
 
